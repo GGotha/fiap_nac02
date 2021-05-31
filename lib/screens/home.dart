@@ -1,5 +1,5 @@
 import 'package:fiap_nac02/components/card_tile_class.dart';
-import 'package:fiap_nac02/components/touchable_opacity.dart';
+import 'package:fiap_nac02/components/future_builder_class.dart';
 import 'package:fiap_nac02/themes/colors.dart';
 import 'package:flutter/material.dart';
 
@@ -14,13 +14,7 @@ class HomeScreen extends StatelessWidget {
         backgroundColor: FiapRedColor,
         centerTitle: true,
       ),
-      body: Column(
-        children: [
-          CardTileClass(),
-          CardTileClass(),
-          CardTileClass(),
-        ],
-      ),
+      body: FutureBuilderClass(),
     );
   }
 }

@@ -3,14 +3,18 @@ import 'package:fiap_nac02/themes/colors.dart';
 import 'package:flutter/material.dart';
 
 class CardTileClass extends StatelessWidget {
+  final String nameClass;
+  final int countClass;
+  var classes;
+
+  CardTileClass({Key key, this.nameClass, this.countClass, this.classes})
+      : super(key: key);
+
   @override
   Widget build(BuildContext context) {
     return TouchableOpacity(
       onTap: () {
-        Navigator.pushNamed(
-          context,
-          "/class-details",
-        );
+        Navigator.pushNamed(context, "/class-details");
       },
       child: Card(
         shape: RoundedRectangleBorder(
@@ -22,11 +26,11 @@ class CardTileClass extends StatelessWidget {
           children: <Widget>[
             ListTile(
               title: Text(
-                "3SIS",
+                nameClass,
                 style: TextStyle(color: Colors.white),
               ),
               subtitle: Text(
-                "44 alunos",
+                "$countClass alunos",
                 style: TextStyle(color: Colors.white),
               ),
             ),
